@@ -31,7 +31,7 @@ let elements: SideBarElement[] = [
 
 const SideBar = () => {
     return (
-      <div className="h-screen w-64 flex flex-col bg-white border-r border-gray-100 p-6">
+      <div className="h-screen w-64 flex flex-col bg-white border-r border-gray-200 p-6">
         <div className="flex items-center gap-2 mb-10">
           <Wallet className="w-10 h-10 text-blue-400" strokeWidth={1.2} />
           <span className="text-2xl font-bold text-center">
