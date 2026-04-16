@@ -29,4 +29,11 @@ export let mockTransactions: Transactions[] = [
     amount: 500,
     type: "income",
   },
+  {
+    date: "02-02-2023",
+    description: "Salary",
+    category: "Work",
+    amount: 400,
+    type: "income",
+  },
 ];

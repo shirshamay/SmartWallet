@@ -6,3 +6,5 @@ Layout
                └── StatCard
                ──  StatCard
                ──  StatCard
+               └ AnalyticsCard
+                └── [ Total Balance | Income | Expenses (last 6 months) ]

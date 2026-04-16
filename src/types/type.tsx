@@ -17,3 +17,13 @@ export interface Transactions {
     amount: number,
     type: "income" | "expense", // it will help with .filter later
 }
+export interface AnalyticsProps {
+    incomes: number,
+    expenses: number,
+    balance: number, 
+}
+export interface MonthlyData {
+    month: string,
+    income: number,
+    expense: number,
+}
