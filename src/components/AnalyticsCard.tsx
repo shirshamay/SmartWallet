@@ -8,12 +8,12 @@ import {
   Tooltip,
   Cell,
 } from "recharts";
-import { monthlyData } from "../data/mockMonthlyData";
 
 const AnalyticsCard: React.FC<AnalyticsProps> = ({
   incomes,
   expenses,
   balance,
+  monthlyData,
 }) => {
   let IncomesAndExpenses = [
     {

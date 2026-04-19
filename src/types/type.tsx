@@ -17,13 +17,18 @@ export interface Transactions {
     amount: number,
     type: "income" | "expense", // it will help with .filter later
 }
+export interface resultData { // what is inside result object i created in calcMonth
+    month?: string,
+    income: number,
+    expense: number,
+}
+export interface result {
+    [key: string]: resultData  // tell ts its object and containes the resultData properties.
+}
 export interface AnalyticsProps {
     incomes: number,
     expenses: number,
     balance: number, 
+    monthlyData: resultData[],
 }
-export interface MonthlyData {
-    month: string,
-    income: number,
-    expense: number,
-}
+
