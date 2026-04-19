@@ -3,6 +3,7 @@ import { DollarSign, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { mockTransactions } from "../data/mockTransactions";
 import type { Transactions } from "../types/type";
 import AnalyticsCard from "./AnalyticsCard";
+import { calcMonth } from "../utilities/calcMonth";
 
 export const Dashboard = () => {
   // create filter on each expense transaction, take the sum of all expenses and add the current expense to it every time the user add a new expense.
@@ -12,6 +13,7 @@ export const Dashboard = () => {
   let totalIncomes = allTransactions(mockTransactions, 'income')
   let totalExpenses = allTransactions(mockTransactions, "expense");
   let balance: number = totalIncomes - totalExpenses; // what's left from the income after the expenses 
+  let monthlyData = calcMonth(mockTransactions)
     // let IncomesAndExpenses = [
     //   {
     //     name: "income",
@@ -57,6 +59,7 @@ export const Dashboard = () => {
           incomes={totalIncomes}
           expenses={totalExpenses}
           balance={balance}
+          monthlyData={monthlyData}
         />
       </div>
       </>
