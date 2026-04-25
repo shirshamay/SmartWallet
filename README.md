@@ -5,7 +5,7 @@ SmartWallet is a mission-driven financial platform built with React and TypeScri
 ## 📸 Screenshots (Work in Progress)
 The project is currently under active development.
 
-<img width="700" height="400" alt="image" src="./public/image.png" />
+<img width="700" height="400" alt="image" src="![alt text](image.png)" />
 
 # Planning & Design
 <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/61b5dc6e-8e45-43b4-934b-93f8ef159658" />

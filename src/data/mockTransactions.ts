@@ -33,7 +33,7 @@ export let mockTransactions: Transactions[] = [
     date: "02-03-2023",
     description: "Salary",
     category: "Work",
-    amount: 500,
+    amount: 500, 
     type: "income",
   },
   {
@@ -88,14 +88,14 @@ export let mockTransactions: Transactions[] = [
   {
     date: "15-06-2023",
     description: "Food",
-    category: "Resturant",
+    category: "Restaurant",
     amount: 900,
     type: "expense",
   },
   {
     date: "16-06-2023",
     description: "Food",
-    category: "Resturant",
+    category: "Restaurant",
     amount: 1300,
     type: "expense",
   },

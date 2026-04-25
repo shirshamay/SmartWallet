@@ -28,7 +28,7 @@ const AnalyticsCard: React.FC<AnalyticsProps> = ({
     },
   ];
   return (
-    <div className="p-4 w-240 h-80 bg-white shadow-md border border-gray-200 rounded-xl flex flex-row justify-evenly">
+    <div className="p-4 w-240 h-76 bg-white shadow-md border border-gray-200 rounded-xl flex flex-row justify-evenly">
       <div>
         <h2 className="font-bold pl-2">Visual Analytics</h2>
       </div>

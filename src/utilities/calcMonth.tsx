@@ -32,4 +32,3 @@ export function calcMonth(transactions: Transactions[]) {
     }))
     return convertToArr;
 }
-// next assignment - make it array think: how to make object to array and then move it to the AnalyticsCard

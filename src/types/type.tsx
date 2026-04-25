@@ -15,7 +15,7 @@ export interface Transactions {
     description: string,
     category: string,
     amount: number,
-    type: "income" | "expense", // it will help with .filter later
+    type: "income" | "expense", 
 }
 export interface resultData { // what is inside result object i created in calcMonth
     month?: string,
@@ -31,4 +31,6 @@ export interface AnalyticsProps {
     balance: number, 
     monthlyData: resultData[],
 }
-
+export interface LastTransactionsProps {
+    lastTrans: Transactions[]
+}
