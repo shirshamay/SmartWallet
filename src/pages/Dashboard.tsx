@@ -1,9 +1,11 @@
-import StatCard from "./StatCard";
+import StatCard from "../components/StatCard";
 import { DollarSign, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { mockTransactions } from "../data/mockTransactions";
 import type { Transactions } from "../types/type";
-import AnalyticsCard from "./AnalyticsCard";
+import AnalyticsCard from "../components/AnalyticsCard";
 import { calcMonth } from "../utilities/calcMonth";
+import LastTransactions from "../components/LastTransactions";
+import { calcLastTransactions } from "../utilities/calcLastTransactions";
 
 export const Dashboard = () => {
   // create filter on each expense transaction, take the sum of all expenses and add the current expense to it every time the user add a new expense.
@@ -14,6 +16,7 @@ export const Dashboard = () => {
   let totalExpenses = allTransactions(mockTransactions, "expense");
   let balance: number = totalIncomes - totalExpenses; // what's left from the income after the expenses 
   let monthlyData = calcMonth(mockTransactions)
+  let lastTrans = calcLastTransactions(mockTransactions)
     // let IncomesAndExpenses = [
     //   {
     //     name: "income",
@@ -51,10 +54,6 @@ export const Dashboard = () => {
       />
       </div>
       <div className="flex gap-5 pl-6">
-        {/* <StatCard variant="default" trend="negative" icon={<ArrowDownRight />} title="Expenses" amount={totalExpenses} />
-        <StatCard variant="default" trend="positive" icon={<ArrowUpRight />}  title="Incomes" amount={totalIncomes} />
-        <StatCard  variant="default" trend="positive" icon={<ArrowUpRight />} title="Balance" amount={balance} /> */
-        }
         <AnalyticsCard
           incomes={totalIncomes}
           expenses={totalExpenses}
@@ -62,6 +61,9 @@ export const Dashboard = () => {
           monthlyData={monthlyData}
         />
       </div>
+      <LastTransactions
+      lastTrans={lastTrans}
+      />
       </>
   );
 };
