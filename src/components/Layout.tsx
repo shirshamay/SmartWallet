@@ -1,6 +1,6 @@
+import { Outlet } from "react-router-dom"; 
 import SideBar from "./SideBar";
 import Header from "./Header";
-import Dashboard from "../pages/Dashboard";
 
 const Layout = () => {
   return (
@@ -8,7 +8,7 @@ const Layout = () => {
       <SideBar />
       <div id="main-screen" className="flex-1 bg-blue-50">
         <Header />
-        <Dashboard />
+        <Outlet />
       </div>
     </div>
   );

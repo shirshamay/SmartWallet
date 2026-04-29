@@ -5,7 +5,7 @@ SmartWallet is a mission-driven financial platform built with React and TypeScri
 ## 📸 Screenshots (Work in Progress)
 The project is currently under active development.
 
-<img width="700" height="400" alt="image" src="![alt text](image.png)" />
+<img width="700" height="400" alt="image" src="./public/WhatsApp Image 2026-04-25 at 17.09.31.jpeg" />
 
 # Planning & Design
 <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/61b5dc6e-8e45-43b4-934b-93f8ef159658" />
@@ -21,6 +21,12 @@ The project is currently under active development.
 - Styling: Tailwind CSS.
 - State Management: Redux Toolkit / Context API.
 - Environment: Vite (for fast development).
+
+## Challenges 
+- Challenge: Transforming raw date strings into readable month names for the charts.
+Solution: I used slice to extract the month number and mapped it to a name using a lookup object (e.g., "01" -> "Jan").
+Logic: I grouped the data by month to calculate total income and expenses for each one.
+Result: This created a clean, organized array that the dashboard can easily display.
 
  # How to run
 1.git clone https://github.com/Shir/smart-wallet.git
