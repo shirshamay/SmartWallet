@@ -12,7 +12,6 @@ import {
 const AnalyticsCard: React.FC<AnalyticsProps> = ({
   incomes,
   expenses,
-  balance,
   monthlyData,
 }) => {
   let IncomesAndExpenses = [

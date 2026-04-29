@@ -2,6 +2,7 @@ import type { Transactions } from "../types/type"
 
 export let mockTransactions: Transactions[] = [
   {
+    id: "1",
     date: "03-01-2023",
     description: "Salary",
     category: "Work",
@@ -9,6 +10,7 @@ export let mockTransactions: Transactions[] = [
     type: "income",
   },
   {
+    id: "2",
     date: "03-01-2023",
     description: "Nails",
     category: "Nails",
@@ -16,6 +18,7 @@ export let mockTransactions: Transactions[] = [
     type: "expense",
   },
   {
+    id: "3",
     date: "08-02-2023",
     description: "Rent",
     category: "Rent",
@@ -23,6 +26,7 @@ export let mockTransactions: Transactions[] = [
     type: "expense",
   },
   {
+    id: "4",
     date: "10-02-2023",
     description: "Salary",
     category: "Work",
@@ -30,13 +34,15 @@ export let mockTransactions: Transactions[] = [
     type: "income",
   },
   {
+    id: "5",
     date: "02-03-2023",
     description: "Salary",
     category: "Work",
-    amount: 500, 
+    amount: 500,
     type: "income",
   },
   {
+    id: "6",
     date: "12-03-2023",
     description: "Salary",
     category: "Work",
@@ -44,6 +50,7 @@ export let mockTransactions: Transactions[] = [
     type: "income",
   },
   {
+    id: "7",
     date: "12-03-2023",
     description: "TV",
     category: "TV",
@@ -51,6 +58,7 @@ export let mockTransactions: Transactions[] = [
     type: "expense",
   },
   {
+    id: "8",
     date: "02-04-2023",
     description: "Salary",
     category: "Work",
@@ -58,6 +66,7 @@ export let mockTransactions: Transactions[] = [
     type: "income",
   },
   {
+    id: "9",
     date: "18-04-2023",
     description: "Nails",
     category: "Nails",
@@ -65,6 +74,8 @@ export let mockTransactions: Transactions[] = [
     type: "expense",
   },
   {
+    id: "10",
+
     date: "03-05-2023",
     description: "Shopping",
     category: "Shopping",
@@ -72,6 +83,7 @@ export let mockTransactions: Transactions[] = [
     type: "expense",
   },
   {
+    id: "11",
     date: "03-05-2023",
     description: "Salary",
     category: "Work",
@@ -79,6 +91,7 @@ export let mockTransactions: Transactions[] = [
     type: "income",
   },
   {
+    id: "12",
     date: "12-06-2023",
     description: "Salary",
     category: "Work",
@@ -86,6 +99,7 @@ export let mockTransactions: Transactions[] = [
     type: "income",
   },
   {
+    id: "13",
     date: "15-06-2023",
     description: "Food",
     category: "Restaurant",
@@ -93,6 +107,7 @@ export let mockTransactions: Transactions[] = [
     type: "expense",
   },
   {
+    id: "14",
     date: "16-06-2023",
     description: "Food",
     category: "Restaurant",

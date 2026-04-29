@@ -17,18 +17,6 @@ export const Dashboard = () => {
   let balance: number = totalIncomes - totalExpenses; // what's left from the income after the expenses 
   let monthlyData = calcMonth(mockTransactions)
   let lastTrans = calcLastTransactions(mockTransactions)
-    // let IncomesAndExpenses = [
-    //   {
-    //     name: "income",
-    //     value: totalIncomes, 
-    //     color: "#60a5fa",
-    //   },
-    //   {
-    //     name: "expense",
-    //     value: totalExpenses,
-    //     color: "#d3d3d3",
-    //   },
-    // ];
   return (
     <>
     <div className="flex flex-row flex-wrap p-6 gap-5">
@@ -57,7 +45,6 @@ export const Dashboard = () => {
         <AnalyticsCard
           incomes={totalIncomes}
           expenses={totalExpenses}
-          balance={balance}
           monthlyData={monthlyData}
         />
       </div>
