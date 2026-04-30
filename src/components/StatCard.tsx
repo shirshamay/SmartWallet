@@ -1,38 +1,43 @@
 import type { StatCardProps } from "../types/type";
 
 const StatCard = ({ variant, trend, title, amount, icon }: StatCardProps) => {
-    let cardPrimaryStyle: string = ""
-    if (
-      variant === "primary") {
-        cardPrimaryStyle = "bg-transparent border-blue-400";
-      return (
-        <div
-          className={`shadow-md border rounded-xl p-4 w-90 h-28 flex flex-col ${cardPrimaryStyle}`}
+  const isPrimary = variant === "primary";
+
+  return (
+    <div
+      className={`
+        shadow-md border rounded-xl p-3 md:p-4 flex flex-col justify-between
+        w-full min-h-27.5 md:h-32 transition-all
+        ${isPrimary ? "bg-transparent border-blue-400" : "bg-white border-gray-200"}
+      `}
+    >
+      <div className="flex justify-between items-start">
+        <h3 className="font-poppins font-bold text-gray-800 text-sm md:text-base leading-tight">
+          {title}
+        </h3>
+        <button
+          className={
+            isPrimary
+              ? "text-blue-500"
+              : trend === "positive"
+                ? "text-green-500"
+                : "text-red-500"
+          }
         >
-          <div className="flex justify-between items-center">
-            <h3 className="font-poppins font-bold">{title}</h3>
-            <button className="">{icon}</button>
-          </div>
-          <h2 className="text-4xl font-medium">{"₪" + amount}</h2>
-          <div className="text-sm font-medium text-green-500">
-            <span>(+2.1%)</span>
-          </div>
-        </div>
-      );
-    } else
-      return (
-        <div className="shadow-md border border-gray-200 rounded-xl p-4 w-70 h-28 flex flex-col bg-white">
-          <h3 className="font-poppins font-bold">{title}</h3>
-          <div className="flex items-center justify-between gap-2">
-            <h2 className="text-4xl font-medium">{"₪" + amount}</h2>
-            <span
-              className={`${trend === "positive" ? "text-green-500" : "text-red-500"}`}
-            >
-              {icon}
-            </span>
-          </div>
-        </div>
-      );
-}
- 
+          {icon}
+        </button>
+      </div>
+      <div className="flex flex-col">
+        {isPrimary && (
+          <span className="text-xs font-medium text-green-500 mt-1">
+            (+2.1%)
+          </span>
+        )}
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium truncate">
+          ₪{amount.toLocaleString()}
+        </h2>
+      </div>
+    </div>
+  );
+};
 export default StatCard;

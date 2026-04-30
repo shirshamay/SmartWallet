@@ -18,40 +18,40 @@ export const Dashboard = () => {
   let monthlyData = calcMonth(mockTransactions)
   let lastTrans = calcLastTransactions(mockTransactions)
   return (
-    <>
-    <div className="flex flex-row flex-wrap p-6 gap-5">
-      <StatCard
-        variant="primary"
-        title="Total Balance:"
-        amount={balance}
-        icon={<DollarSign />}
-      />
-      <StatCard
-        variant="default"
-        trend='positive'
-        title="Total Monthly Incomes"
-        amount={totalIncomes}
-        icon={<ArrowUpRight />}
-      />
-      <StatCard
-        variant="default"
-        trend='negative'
-        title="Total Monthly Expenses"
-        amount={totalExpenses}
-        icon={<ArrowDownRight />}
-      />
+    <div className="w-full min-h-screen flex flex-col gap-5 p-3 md:p-6">
+      <div className="flex flex-col lg:flex-row gap-5">
+        <StatCard
+          variant="primary"
+          title="Total Balance:"
+          amount={balance}
+          icon={<DollarSign />}
+        />
+        <StatCard
+          variant="default"
+          trend="positive"
+          title="Total Monthly Incomes"
+          amount={totalIncomes}
+          icon={<ArrowUpRight />}
+        />
+        <StatCard
+          variant="default"
+          trend="negative"
+          title="Total Monthly Expenses"
+          amount={totalExpenses}
+          icon={<ArrowDownRight />}
+        />
       </div>
-      <div className="flex gap-5 pl-6">
+      <div className="w-full">
         <AnalyticsCard
           incomes={totalIncomes}
           expenses={totalExpenses}
           monthlyData={monthlyData}
         />
       </div>
-      <LastTransactions
-      lastTrans={lastTrans}
-      />
-      </>
+      <div className="w-full">
+        <LastTransactions lastTrans={lastTrans} />
+      </div>
+    </div>
   );
 };
 
