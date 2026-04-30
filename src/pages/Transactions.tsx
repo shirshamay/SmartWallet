@@ -6,7 +6,7 @@ const Transactions = () => {
       <div>
         {/* here to add the filter + editing + adding + deleting button */}
       </div>
-      <div className="grid grid-cols-4 gap-1 sm:gap-4 w-full bg-gray-200 shadow-md border-b border-gray-300 rounded-md h-10 p-1 sm:p-2 items-center">
+      <div className="grid grid-cols-4 gap-1 sm:gap-2 md:gap-4 w-full bg-gray-200 shadow-md border-b border-gray-300 rounded-md h-10 p-1 sm:p-2 text-xs sm:text-sm items-center">
         <p>Date</p>
         <p>Description</p>
         <p>Category</p>
@@ -15,16 +15,16 @@ const Transactions = () => {
       {mockTransactions.map((trans, index) => (
         <div
           key={index}
-          className="grid grid-cols-4 justify-items-stretch p-2 border-b border-gray-300"
+          className="grid grid-cols-4 gap-4 justify-items-stretch p-1 sm:p-2 border-b border-gray-300 text-xs sm:text-sm"
         >
           <p>{trans.date}</p>
-          <p>{trans.description}</p>
+          <p className="truncate pr-2">{trans.description}</p>
           <div className="flex items-center">
             {categoryIcons[trans.category]}
             {trans.category}
           </div>
           <p
-            className={`${trans.type === "expense" ? "text-red-500" : "text-black"}`}
+            className={`font-bold md:text-left text-right whitespace-nowrap ${trans.type === "expense" ? "text-red-500" : "text-black"}`}
           >
             {trans.type === "expense" ? "-" : ""}
             {trans.amount}
