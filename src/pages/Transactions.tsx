@@ -2,7 +2,7 @@ import { mockTransactions } from "../data/mockTransactions";
 import { categoryIcons } from "../utilities/categoryIcons";
 const Transactions = () => {
   return (
-    <div className="p-4 m-5 w-full h-full md:p-6 bg-white shadow-md border border-gray-200 rounded-xl font-medium overflow-scroll">
+    <div className="p-4 m-3 w-9% h-full md:p-5 bg-white shadow-md border border-gray-200 rounded-xl font-medium overflow-y-scroll">
       <div>
         {/* here to add the filter + editing + adding + deleting button */}
       </div>
