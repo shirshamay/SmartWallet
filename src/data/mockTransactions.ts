@@ -12,16 +12,16 @@ export let mockTransactions: Transactions[] = [
   {
     id: "2",
     date: "03-01-2023",
-    description: "Nails",
-    category: "Nails",
+    description: "Fuel",
+    category: "Fuel",
     amount: 2000,
     type: "expense",
   },
   {
     id: "3",
     date: "08-02-2023",
-    description: "Rent",
-    category: "Rent",
+    description: "Fuel",
+    category: "Fuel",
     amount: 2000,
     type: "expense",
   },
@@ -68,14 +68,13 @@ export let mockTransactions: Transactions[] = [
   {
     id: "9",
     date: "18-04-2023",
-    description: "Nails",
-    category: "Nails",
+    description: "Fuel",
+    category: "Fuel",
     amount: 600,
     type: "expense",
   },
   {
     id: "10",
-
     date: "03-05-2023",
     description: "Shopping",
     category: "Shopping",

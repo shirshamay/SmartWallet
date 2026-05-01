@@ -81,7 +81,7 @@ const SideBar = () => {
               Smart<span className="text-blue-400">Wallet</span>
             </span>
           </div>
-          <nav className="flex flex-col gap-2">
+          <nav className="flex flex-col justify-evenly gap-2">
             {elements.map((el) => (
               <NavLink
                 key={el.label}
@@ -96,7 +96,7 @@ const SideBar = () => {
                   }`
                 }
               >
-                <span className="shrink-0">{el.icon}</span>{" "}
+                <span>{el.icon}</span>{" "}
                 <span className="text-gray-600 group-hover:text-blue-600 font-medium">
                   {el.label}
                 </span>

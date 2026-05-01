@@ -6,7 +6,7 @@ const Header = () => {
       id="dashboard-frontBar"
       className="bg-white border-b border-gray-200 h-20 flex justify-between items-center px-4 sm:px-6 md:px-8 py-4"
     >
-      <h1 className="text-xl sm:text-2xl font-bold px-0 sm:px-2">Dashboard</h1>
+      <h1 className="text-xl md:text-2xl font-bold px-0 sm:px-2 ml-12">Dashboard</h1>
       <div className="flex items-center gap-3">
         <BellDot className="cursor-pointer" />
         <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-bold cursor-pointer">

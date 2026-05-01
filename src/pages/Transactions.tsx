@@ -6,7 +6,7 @@ const Transactions = () => {
       <div>
         {/* here to add the filter + editing + adding + deleting button */}
       </div>
-      <div className="grid grid-cols-4 gap-1 sm:gap-2 md:gap-4 w-full bg-gray-200 shadow-md border-b border-gray-300 rounded-md h-10 p-1 sm:p-2 text-xs sm:text-sm items-center">
+      <div className="hidden md:grid grid-cols-3 md:grid-cols-4 sm:gap-2 md:gap-4 w-full bg-gray-200 shadow-md border-b border-gray-300 rounded-md h-10 p-1 sm:p-2 text-md items-center">
         <p>Date</p>
         <p>Description</p>
         <p>Category</p>
@@ -15,21 +15,35 @@ const Transactions = () => {
       {mockTransactions.map((trans, index) => (
         <div
           key={index}
-          className="grid grid-cols-4 gap-4 justify-items-stretch p-1 sm:p-2 border-b border-gray-300 text-xs sm:text-sm"
+          className="md:grid md:grid-cols-4 flex flex-col gap-4 p-1 sm:p-2 border-b border-gray-300 text-md "
         >
-          <p>{trans.date}</p>
-          <p className="truncate pr-2">{trans.description}</p>
-          <div className="flex items-center">
-            {categoryIcons[trans.category]}
-            {trans.category}
+          <div className="flex justify-between md:block">
+            <span className="text-lg text-gray-400 md:hidden">Date:</span>
+            <p>{trans.date}</p>
           </div>
+          <div className="flex justify-between md:block">
+            <span className="text-lg text-gray-400 md:hidden">Description::</span>
+
+            <p className="pr-2">{trans.description}</p>
+          </div>
+          <div className="flex md:items-center justify-between">
+            <span className="text-lg text-gray-400 md:hidden">Category:</span>
+            <div className="flex">
+            {categoryIcons[trans.category]}
+            {trans.category} 
+        </div>
+          </div>
+                    <div className="flex justify-between md:block">
+            <span className="text-lg text-gray-400 md:hidden">Amount:</span>
+
           <p
             className={`font-bold md:text-left text-right whitespace-nowrap ${trans.type === "expense" ? "text-red-500" : "text-black"}`}
           >
             {trans.type === "expense" ? "-" : ""}
             {trans.amount}
           </p>
-        </div>
+          </div>
+          </div>
       ))}
     </div>
   );
