@@ -9,6 +9,8 @@ Link for live demo: https://smartwallet-eta.vercel.app/
 The project is currently under active development.
 
 <img width="700" height="400" alt="image" src="./public/WhatsApp Image 2026-04-25 at 17.09.31.jpeg" />
+<img width="700" height="400" alt="image" src="./public/CurrentTransctionsPage.png" />
+
 
 # Planning & design
 <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/61b5dc6e-8e45-43b4-934b-93f8ef159658" />
@@ -33,6 +35,10 @@ Logic: I grouped the data by month to calculate total income and expenses for ea
 Result: This created a clean, organized array that the dashboard can easily display.
 - Challenge: Avoiding code duplication when calculating financial totals for different transaction types (Incomes vs. Expenses).
 Solution: Instead of writing separate logic for each type, I applied the DRY (Don't Repeat Yourself) principle by creating a reusable helper function. This function uses filter and reduce to dynamically calculate totals based on the transaction type, making the codebase more maintainable and scalable.
+- Challenge: I struggled with responsiveness in mobile and tablets, because the challenge was how to make the graphs and transactions tables responsive
+and readable in small screens. 
+Solution: I tried first to use techniques of truncate and text alignment however it didn't solve it properly so I tried to give more height to the 
+graphs cards and smaller width, also I change the tables of transactions from grid in desktops to flex in mobiles and tablets in order to keep everything clear without breaking the cards or harming the UX.
 
 ## 🗺️ Planned roadmap (soon updates)
 - Full CRUD Functionality: Allowing users to add, edit, and delete transactions.
@@ -46,6 +52,7 @@ Solution: Instead of writing separate logic for each type, I applied the DRY (Do
 - How to use map, reduce, filter properly
 - Working with libraries like recharts, lucide-react, React Router v7.
 - JS dates start from 0-11
+- Responsiveness with Tailwind CSS on graphs.
 
  # How to run
 1.git clone https://github.com/Shir/smart-wallet.git
