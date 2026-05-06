@@ -1,6 +1,6 @@
-import type { Transactions } from "../types/type";
+import type { Transaction } from "../types/type";
 
-export function calcLastTransactions(transactions: Transactions[]) {
+export function calcLastTransactions(transactions: Transaction[]) {
     let newTransaction = [...transactions]
     newTransaction.sort((a, b) => {
         let fixDate1 = a.date.split('-')

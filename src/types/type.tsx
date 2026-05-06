@@ -11,7 +11,7 @@ export interface StatCardProps {
   amount: number;
   icon: React.ReactNode;
 }
-export interface Transactions {
+export interface Transaction {
   id: string;
   date: string;
   description: string;
@@ -41,13 +41,13 @@ export interface AnalyticsProps {
 }
 
 export interface LastTransactionsProps {
-  lastTrans: Transactions[];
+  lastTrans: Transaction[];
 }
 export interface walletContextType {
-  transaction: Transactions[];
-  addTransaction: (transaction: Transactions) => void;
+  transaction: Transaction[];
+  addTransaction: (transaction: Transaction) => void;
   deleteTransaction: (id: string) => void;
 }
 export interface walletProviderProps {
-  children: React.ReactNode,
+  children: React.ReactNode, // REACTNODE = every thing that REACT knows how to render
 }

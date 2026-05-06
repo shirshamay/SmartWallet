@@ -4,7 +4,7 @@ import {
   House,
   MonitorPlay,
   ShoppingBag,
-  Fuel
+  Fuel,
 } from "lucide-react";
 
 export let categoryIcons: Record<string, React.ReactNode> = {
