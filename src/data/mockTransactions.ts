@@ -1,6 +1,6 @@
-import type { Transactions } from "../types/type"
+import type { Transaction } from "../types/type"
 
-export let mockTransactions: Transactions[] = [
+export let mockTransactions: Transaction[] = [
   {
     id: "1",
     date: "03-01-2023",

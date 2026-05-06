@@ -3,9 +3,10 @@ import Layout from "./components/Layout";
 import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
 import InProgress from "./pages/InProgress";
-
+import { WalletProvider } from "./context/WalletContext";
 function App() {
   return (
+    <WalletProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -23,6 +24,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+
+    </WalletProvider>
   );
 }
 

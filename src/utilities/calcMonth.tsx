@@ -1,6 +1,6 @@
-import type { Transactions } from "../types/type";
+import type { Transaction } from "../types/type";
 import type { result } from "../types/type";
-export function calcMonth(transactions: Transactions[]) {
+export function calcMonth(transactions: Transaction[]) {
     let result: result  = {}
     let months: Record<string,string> = {
         "01": "Jan",

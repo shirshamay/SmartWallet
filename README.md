@@ -9,7 +9,9 @@ Link for live demo: https://smartwallet-eta.vercel.app/
 The project is currently under active development.
 
 <img width="700" height="400" alt="image" src="./public/WhatsApp Image 2026-04-25 at 17.09.31.jpeg" />
-<img width="700" height="400" alt="image" src="./public/CurrentTransctionsPage.png" />
+<img width="700" height="400" alt="image" src="./public/WhatsApp Image 2026-05-06 at 12.57.05 (1).jpeg" />
+<img width="700" height="400" alt="image" src="./public/WhatsApp Image 2026-05-06 at 12.57.05.jpeg" />
+
 
 
 # Planning & design
@@ -39,6 +41,9 @@ Solution: Instead of writing separate logic for each type, I applied the DRY (Do
 and readable in small screens. 
 Solution: I tried first to use techniques of truncate and text alignment however it didn't solve it properly so I tried to give more height to the 
 graphs cards and smaller width, also I change the tables of transactions from grid in desktops to flex in mobiles and tablets in order to keep everything clear without breaking the cards or harming the UX.
+- Challenge: Initially, when building the addTransaction function in WalletContext, I attempted to initialize a new transaction by fetching the entire existing array and manually creating an object with empty values.
+Solution: Later I realized that I didn't need to do that since I already had a well-defined Transaction interface in TypeScript, so I need to put it in. I did let transactionList = [...transactions, Transaction].
+
 
 ## 🗺️ Planned roadmap (soon updates)
 - Full CRUD Functionality: Allowing users to add, edit, and delete transactions.
