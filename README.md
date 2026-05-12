@@ -17,6 +17,12 @@ The project is currently under active development.
 # Planning & design
 <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/61b5dc6e-8e45-43b4-934b-93f8ef159658" />
 
+# Lighthouse score - before & after
+<img width="700" height="400" alt="image" src="./public/Before Lighthouse.jpeg" />
+<img width="700" height="400" alt="image" src="./public/After lighthouse.jpeg" />
+
+
+
 # 🚀 Key features
 - Expense Tracking: Log and categorize daily transactions (Coming soon).
 - Smart Analytics: Visualize your total balance, income, and expenses with a clean dashboard.
@@ -43,6 +49,13 @@ Solution: I tried first to use techniques of truncate and text alignment however
 graphs cards and smaller width, also I change the tables of transactions from grid in desktops to flex in mobiles and tablets in order to keep everything clear without breaking the cards or harming the UX.
 - Challenge: Initially, when building the addTransaction function in WalletContext, I attempted to initialize a new transaction by fetching the entire existing array and manually creating an object with empty values.
 Solution: Later I realized that I didn't need to do that since I already had a well-defined Transaction interface in TypeScript, so I need to put it in. I did let transactionList = [...transactions, Transaction].
+- Challenge: At first I wanted to add the local storage method in order to save the transaction the user added or deleted , I got stucked when adding a new
+transaction the date was lifted up without the consideration of looking at the ordering of the dates 
+Solution: I added a if else statement inside useState
+and checked if its coming from local storage make it an object so I can add it to the tranaction later if not return only mockTransactions array
+then I created the sortedTransaction array to sort the transactions in the state to order the dated an example: `const sortedTransactions = [...transactions].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });`
 
 
 ## 🗺️ Planned roadmap (soon updates)

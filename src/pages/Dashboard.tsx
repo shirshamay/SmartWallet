@@ -21,6 +21,7 @@ export const Dashboard = () => {
   let balance: number = totalIncomes - totalExpenses; // what's left from the income after the expenses 
   let monthlyData = calcMonth(transaction)
   let lastTrans = calcLastTransactions(transaction)
+  console.log("DEBUG - Monthly Data:", monthlyData);
   return (
     <div className="w-full min-h-screen flex flex-col gap-5 p-3 md:p-6">
       <div className="flex flex-col lg:flex-row gap-5">

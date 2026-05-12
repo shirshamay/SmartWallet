@@ -16,32 +16,68 @@ import { useState, useEffect } from "react";
 let elements: SideBarElement[] = [
   {
     label: "Dashboard",
-    icon: <LayoutDashboard className="text-gray-500" strokeWidth={1.2} />,
+    icon: (
+      <LayoutDashboard
+        className="text-gray-500"
+        strokeWidth={1.2}
+        aria-hidden="true"
+      />
+    ),
     path: "/",
   },
   {
     label: "Transactions",
-    icon: <ArrowLeftRight className="text-gray-500" strokeWidth={1.2} />,
+    icon: (
+      <ArrowLeftRight
+        className="text-gray-500"
+        strokeWidth={1.2}
+        aria-hidden="true"
+      />
+    ),
     path: "/transactions",
   },
   {
     label: "Investments",
-    icon: <ChartNoAxesCombined className="text-gray-500" strokeWidth={1.2} />,
+    icon: (
+      <ChartNoAxesCombined
+        className="text-gray-500"
+        strokeWidth={1.2}
+        aria-hidden="true"
+      />
+    ),
     path: "/investments",
   },
   {
     label: "Savings Tips",
-    icon: <HandCoins className="text-gray-500" strokeWidth={1.2} />,
+    icon: (
+      <HandCoins
+        className="text-gray-500"
+        strokeWidth={1.2}
+        aria-hidden="true"
+      />
+    ),
     path: "/savings",
   },
   {
     label: "Profile",
-    icon: <CircleUserRound className="text-gray-500" strokeWidth={1.2} />,
+    icon: (
+      <CircleUserRound
+        className="text-gray-500"
+        strokeWidth={1.2}
+        aria-hidden="true"
+      />
+    ),
     path: "/profile",
   },
   {
     label: "Settings",
-    icon: <Settings className="text-gray-500" strokeWidth={1.2} />,
+    icon: (
+      <Settings
+        className="text-gray-500"
+        strokeWidth={1.2}
+        aria-hidden="true"
+      />
+    ),
     path: "/settings",
   },
 ];
@@ -61,6 +97,7 @@ const SideBar = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-md md:hidden"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         {isOpen ? <X /> : <Menu />}
       </button>
@@ -74,11 +111,11 @@ const SideBar = () => {
         <div className="h-screen w-full md:w-64 flex flex-col bg-white border-r border-gray-200 p-6">
           <div className="flex items-center justify-center md:justify-start gap-2 mb-10">
             <Wallet
-              className="w-10 h-10 text-blue-400 shrink-0"
+              className="w-10 h-10 text-blue-600 shrink-0"
               strokeWidth={1.2}
             />
             <span className="text-2xl font-bold text-center">
-              Smart<span className="text-blue-400">Wallet</span>
+              Smart<span className="text-blue-600">Wallet</span>
             </span>
           </div>
           <nav className="flex flex-col justify-evenly gap-2">

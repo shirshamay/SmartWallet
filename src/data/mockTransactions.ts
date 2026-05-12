@@ -3,7 +3,7 @@ import type { Transaction } from "../types/type"
 export let mockTransactions: Transaction[] = [
   {
     id: "1",
-    date: "03-01-2023",
+    date: "2026-01-03",
     description: "Salary",
     category: "Work",
     amount: 3000,
@@ -11,7 +11,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "2",
-    date: "03-01-2023",
+    date: "2026-01-03",
     description: "Fuel",
     category: "Fuel",
     amount: 2000,
@@ -19,7 +19,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "3",
-    date: "08-02-2023",
+    date: "2026-02-08",
     description: "Fuel",
     category: "Fuel",
     amount: 2000,
@@ -27,7 +27,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "4",
-    date: "10-02-2023",
+    date: "2026-02-10",
     description: "Salary",
     category: "Work",
     amount: 300,
@@ -35,7 +35,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "5",
-    date: "02-03-2023",
+    date: "2026-03-02",
     description: "Salary",
     category: "Work",
     amount: 500,
@@ -43,7 +43,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "6",
-    date: "12-03-2023",
+    date: "2026-03-12",
     description: "Salary",
     category: "Work",
     amount: 2700,
@@ -51,7 +51,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "7",
-    date: "12-03-2023",
+    date: "2026-03-12",
     description: "TV",
     category: "TV",
     amount: 3000,
@@ -59,7 +59,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "8",
-    date: "02-04-2023",
+    date: "2026-04-02",
     description: "Salary",
     category: "Work",
     amount: 2000,
@@ -67,7 +67,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "9",
-    date: "18-04-2023",
+    date: "2026-04-18",
     description: "Fuel",
     category: "Fuel",
     amount: 600,
@@ -75,7 +75,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "10",
-    date: "03-05-2023",
+    date: "2026-05-03",
     description: "Shopping",
     category: "Shopping",
     amount: 400,
@@ -83,7 +83,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "11",
-    date: "03-05-2023",
+    date: "2026-05-03",
     description: "Salary",
     category: "Work",
     amount: 4000,
@@ -91,7 +91,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "12",
-    date: "12-06-2023",
+    date: "2026-06-12",
     description: "Salary",
     category: "Work",
     amount: 4000,
@@ -99,7 +99,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "13",
-    date: "15-06-2023",
+    date: "2026-06-15",
     description: "Food",
     category: "Restaurant",
     amount: 900,
@@ -107,7 +107,7 @@ export let mockTransactions: Transaction[] = [
   },
   {
     id: "14",
-    date: "16-06-2023",
+    date: "2026-06-16",
     description: "Food",
     category: "Restaurant",
     amount: 1300,
