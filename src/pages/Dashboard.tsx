@@ -1,6 +1,6 @@
 import StatCard from "../components/StatCard";
 import { DollarSign, ArrowUpRight, ArrowDownRight } from "lucide-react";
-import type { Transaction } from "../types/type";
+import { calcAllTransactions } from "../utilities/calcAllTransactions";
 import AnalyticsCard from "../components/AnalyticsCard";
 import { calcMonth } from "../utilities/calcMonth";
 import LastTransactions from "../components/LastTransactions";
@@ -12,12 +12,8 @@ export const Dashboard = () => {
   const context = useContext(WalletContext);
   if (!context) return null;
   const { transaction } = context;
-  // create filter on each expense transaction, take the sum of all expenses and add the current expense to it every time the user add a new expense.
-  const allTransactions = (transactions: Transaction[], type: 'expense' | 'income'): number => {
-    return transactions.filter((transaction) => transaction.type === type).reduce((accumulator, currentTransaction) => accumulator + currentTransaction.amount, 0)
-  }
-  let totalIncomes = allTransactions(transaction, 'income')
-  let totalExpenses = allTransactions(transaction, "expense");
+  let totalIncomes = calcAllTransactions(transaction, 'income')
+  let totalExpenses = calcAllTransactions(transaction, "expense");
   let balance: number = totalIncomes - totalExpenses; // what's left from the income after the expenses 
   let monthlyData = calcMonth(transaction)
   let lastTrans = calcLastTransactions(transaction)
