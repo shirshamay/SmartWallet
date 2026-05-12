@@ -11,8 +11,10 @@ export function calcMonth(transactions: Transaction[]) {
         "06": "Jun",
     }
     for (let data of transactions) {
-        let monthNumber: string = data.date.slice(3, 5) // now I got the month
+        let monthNumber: string = data.date.slice(5, 7) // now I got the month
         let monthName: string = months[monthNumber]
+        if (!monthName) continue;
+        console.log("Date:", data.date, "Extracted Number:", monthNumber);
         if (!result[monthName]) { // if in result object it doesnt have the specific month
             result[monthName] = {
                 income: 0,
@@ -30,5 +32,6 @@ export function calcMonth(transactions: Transaction[]) {
         income: result[keys].income,
         expense: result[keys].expense,
     }))
+    console.table(convertToArr);
     return convertToArr;
 }
