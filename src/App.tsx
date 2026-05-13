@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
 import InProgress from "./pages/InProgress";
 import { WalletProvider } from "./context/WalletContext";
+import Investments from "./pages/Investments";
 function App() {
   return (
     <WalletProvider>
@@ -15,9 +16,9 @@ function App() {
 
           {/* דף הטרנזקציות */}
           <Route path="transactions" element={<Transactions />} />
+          <Route path="investments" element={<Investments />} />
 
           {/* דפים שעדיין בבנייה */}
-          <Route path="investments" element={<InProgress />} />
           <Route path="savings" element={<InProgress />} />
           <Route path="profile" element={<InProgress />} />
           <Route path="settings" element={<InProgress />} />
